@@ -1,27 +1,109 @@
-🚲 Bicycle Price Prediction with TensorFlow
+# 🚲 Bicycle Price Prediction with Neural Network
 
-This project is an educational machine learning application that predicts bicycle prices using a feedforward neural network built with TensorFlow/Keras.
-The model is trained on two numerical features and learns the relationship between these features and the target variable (price).
+This project is a beginner-friendly machine learning regression example that predicts bicycle prices based on two numerical features.
 
-The workflow includes data loading, exploratory visualization, train–test splitting, feature scaling with MinMaxScaler, neural network training, and model evaluation using MAE, MSE, and RMSE metrics.
-Training loss is visualized to observe the learning process, and a scatter plot of actual vs predicted values is used to assess model performance.
+It was built using **Python, TensorFlow, Scikit-learn, Pandas, and Seaborn** and demonstrates the full ML workflow:
+data loading → preprocessing → train/test split → scaling → model training → evaluation → visualization → prediction.
 
-The neural network consists of three hidden layers with ReLU activation and an output layer for regression.
-The model is optimized with Adam and trained for 500 epochs.
+---
 
-After training, users can enter new feature values to obtain a real-time price prediction.
-For reliable results, input values should be within the range 1740–1760, since the model was trained on data in this interval and does not extrapolate well beyond it.
+## 📊 Project Goal
 
-This project was created to practice:
+The goal of this project is to learn and demonstrate how a neural network can model the relationship between product features and price.
 
-Neural network regression
+We train a regression model to predict the **price of a bicycle** using:
 
-TensorFlow/Keras workflow
+- `BisikletOzellik1`
+- `BisikletOzellik2`
 
-Data preprocessing and scaling
+---
 
-Model evaluation and visualization
+## 🧠 Model Architecture
 
-Building a complete end-to-end ML pipeline
+The neural network is built with TensorFlow/Keras:
 
-Future improvements may include model saving/loading, hyperparameter tuning, additional features, and comparison with classical regression models.
+- Input layer (2 features)
+- 3 hidden layers (ReLU activation)
+- Output layer (1 neuron – price prediction)
+
+Loss function: **Mean Squared Error (MSE)**  
+Optimizer: **Adam**
+
+---
+
+## ⚙️ Data Preprocessing
+
+- Train/test split: **67% train / 33% test**
+- Feature scaling: **MinMaxScaler**
+- Model trained for **500 epochs**
+
+---
+
+## 📈 Evaluation Metrics
+
+The model is evaluated using:
+
+- Train Loss
+- Test Loss
+- RMSE (Root Mean Squared Error)
+- MAE (Mean Absolute Error)
+- Scatter plot: *Actual vs Predicted Prices*
+
+These metrics help us understand how well the model generalizes to unseen data.
+
+---
+
+## 📉 Training Visualization
+
+A loss curve is plotted to show how the model improves during training.
+
+A scatter plot compares:
+
+- Real prices
+- Predicted prices
+
+A good model should show points close to the diagonal line.
+
+---
+
+## 🔮 Interactive Prediction
+
+After training, the user can enter new feature values to predict a bicycle price.
+
+⚠️ Important:  
+The model was trained on feature values roughly between **1745 and 1754**.  
+For meaningful predictions, you should enter values within this range.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- TensorFlow / Keras
+- Scikit-learn
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+
+---
+
+## 📚 Project Type
+
+This is an **educational machine learning project** created to practice:
+
+- Regression with neural networks
+- Data preprocessing
+- Model evaluation
+- Visualization
+- GitHub project structure
+
+---
+
+## 🚀 Future Improvements
+
+- Add more input features
+- Try Linear Regression and compare results
+- Hyperparameter tuning
+- Save and load trained model
+- Add real-world dataset
